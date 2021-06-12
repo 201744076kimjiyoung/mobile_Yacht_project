@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+    <!-- ScoreBoard -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:id="@+id/TrunBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/Turn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:height="35dp"
+                android:gravity="center"
+                android:text="0/12"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/P1Turn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/Turn"
+                android:width="80dp"
+                android:height="35dp"
+                android:gravity="center"
+                android:text="P1"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/P2Turn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/P1Turn"
+                android:width="80dp"
+                android:height="35dp"
+                android:gravity="center"
+                android:text="P2"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+        </RelativeLayout>
+        <!-- Aces-->
+        <RelativeLayout
+            android:id="@+id/AcesBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Aces"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:height="45dp"
+                android:gravity="center"
+                android:text="Aces"
+                android:textSize="20dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P1AcesBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/Aces"
+                android:onClick="onButtonClick" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P2AcesBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClick"
+                android:layout_toRightOf="@+id/P1AcesBtn" />
+        </RelativeLayout>
+        <!-- Deuces-->
+        <RelativeLayout
+            android:id="@+id/DeucesBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Deuces"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:height="45dp"
+                android:gravity="center"
+                android:text="Deuces"
+                android:textSize="20dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P1DeucesBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/Deuces"
+                android:onClick="onButtonClick" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P2DeucesBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClick"
+                android:layout_toRightOf="@+id/P1DeucesBtn" />
+        </RelativeLayout>
+        <!-- Threes-->
+        <RelativeLayout
+            android:id="@+id/ThreesBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Threes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:height="45dp"
+                android:gravity="center"
+                android:text="Threes"
+                android:textSize="20dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P1ThreesBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/Threes"
+                android:onClick="onButtonClick" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P2ThreesBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClick"
+                android:layout_toRightOf="@+id/P1ThreesBtn" />
+        </RelativeLayout>
+        <!-- Fours-->
+        <RelativeLayout
+            android:id="@+id/FoursBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Fours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:height="45dp"
+                android:gravity="center"
+                android:text="Fours"
+                android:textSize="20dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P1FoursBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClick"
+                android:layout_toRightOf="@+id/Fours" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P2FoursBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/P1FoursBtn"
+                android:onClick="onButtonClick" />
+        </RelativeLayout>
+        <!-- Fives-->
+        <RelativeLayout
+            android:id="@+id/FivesBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Fives"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:height="45dp"
+                android:gravity="center"
+                android:text="Fives"
+                android:textSize="20dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P1FivesBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClick"
+                android:layout_toRightOf="@+id/Fives" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P2FivesBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/P1FivesBtn"
+                android:onClick="onButtonClick" />
+        </RelativeLayout>
+        <!-- Sixes-->
+        <RelativeLayout
+            android:id="@+id/SixesBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Sixes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:height="45dp"
+                android:gravity="center"
+                android:text="Sixes"
+                android:textSize="20dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P1SixesBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClick"
+                android:layout_toRightOf="@+id/Sixes" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P2SixesBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClick"
+                android:layout_toRightOf="@+id/P1SixesBtn" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/BounsBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Bouns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:height="35dp"
+                android:gravity="center"
+                android:text="Subtotal"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/P1Bouns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/Bouns"
+                android:width="80dp"
+                android:height="35dp"
+                android:gravity="center"
+                android:text="0/63"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/P2Bouns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/P1Bouns"
+                android:width="80dp"
+                android:height="35dp"
+                android:gravity="center"
+                android:text="0/63"
+                android:textSize="20dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/BounsBarCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/BounsCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:height="35dp"
+                android:gravity="center"
+                android:text="+35"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/P1BounsCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/BounsCheck"
+                android:width="80dp"
+                android:height="35dp"
+                android:gravity="center"
+                android:text="X"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/P2BounsCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/P1BounsCheck"
+                android:width="80dp"
+                android:height="35dp"
+                android:gravity="center"
+                android:text="X"
+                android:textSize="20dp" />
+        </RelativeLayout>
+        <!-- Choice-->
+        <RelativeLayout
+            android:id="@+id/ChoiceBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:height="45dp"
+                android:gravity="center"
+                android:text="Choice"
+                android:textSize="20dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P1ChoiceBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClick"
+                android:layout_toRightOf="@+id/Choice" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P2ChoiceBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/P1ChoiceBtn"
+                android:onClick="onButtonClick" />
+        </RelativeLayout>
+        <!-- 4OfAKind-->
+        <RelativeLayout
+            android:id="@+id/FourOfaKindBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/FourOfaKind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:height="45dp"
+                android:gravity="center"
+                android:text="4 Of A Kind"
+                android:textSize="18dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P1FourOfaKindBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/FourOfaKind"
+                android:onClick="onButtonClick" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P2FourOfaKindBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClick"
+                android:layout_toRightOf="@+id/P1FourOfaKindBtn" />
+        </RelativeLayout>
+        <!-- FullHouse-->
+        <RelativeLayout
+            android:id="@+id/FullHouseBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/FullHouse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:height="45dp"
+                android:gravity="center"
+                android:text="Full House"
+                android:textSize="18dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P1FullHouseBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/FullHouse"
+                android:onClick="onButtonClick" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P2FullHouseBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/P1FullHouseBtn"
+                android:onClick="onButtonClick" />
+        </RelativeLayout>
+        <!-- S.Straight-->
+        <RelativeLayout
+            android:id="@+id/SmallStraightBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/SmallStraight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:height="45dp"
+                android:gravity="center"
+                android:text="S.Straight"
+                android:textSize="18dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P1SmallStraightBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/SmallStraight"
+                android:onClick="onButtonClick" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P2SmallStraightBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/P1SmallStraightBtn"
+                android:onClick="onButtonClick" />
+        </RelativeLayout>
+        <!-- L.Straight-->
+        <RelativeLayout
+            android:id="@+id/LargeStraightBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/LargeStraight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:height="45dp"
+                android:gravity="center"
+                android:text="L.Straight"
+                android:textSize="18dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P1LargeStraightBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClick"
+                android:layout_toRightOf="@+id/LargeStraight" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P2LargeStraightBtn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/P1LargeStraightBtn"
+                android:onClick="onButtonClick"/>
+        </RelativeLayout>
+        <!-- Yacht-->
+        <RelativeLayout
+            android:id="@+id/YachtBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Yacht"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:height="45dp"
+                android:gravity="center"
+                android:text="Yacht"
+                android:textSize="18dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P1YachtBtn"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:layout_toRightOf="@+id/Yacht"
+                android:background="@drawable/gif"
+                android:onClick="onButtonClick"
+                android:textColor="#000000" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/P2YachtBtn"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:layout_toRightOf="@+id/P1YachtBtn"
+                android:background="@drawable/gif"
+                android:onClick="onButtonClick"
+                android:textColor="#000000" />
+        </RelativeLayout>
+        <!-- Total-->
+        <RelativeLayout
+            android:id="@+id/TotalBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="100dp"
+                android:height="35dp"
+                android:gravity="center"
+                android:text="Total"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/P1Total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/Total"
+                android:width="80dp"
+                android:height="35dp"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/P2Total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/P1Total"
+                android:width="80dp"
+                android:height="35dp"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="20dp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- Dice IMG && Roll DIce-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/DiceImageView1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:onClick="onButtonClick"
+            android:outlineSpotShadowColor="#FFFFFF"
+            app:srcCompat="@drawable/dice_num1" />
+        <ImageView
+            android:id="@+id/DiceImageView2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/dice_num1"
+            android:onClick="onButtonClick"/>
+        <ImageView
+            android:id="@+id/DiceImageView3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/dice_num1"
+            android:onClick="onButtonClick"/>
+        <ImageView
+            android:id="@+id/DiceImageView4"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/dice_num1"
+            android:onClick="onButtonClick"/>
+        <ImageView
+            android:id="@+id/DiceImageView5"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/dice_num1"
+            android:onClick="onButtonClick"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/DiceRolling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onButtonClick"
+            android:background="@drawable/rolldicebutton"
+            android:text="주사위 굴리기"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/DiceRollingcount_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="주사위 굴린횟수"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/DiceRollingcount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0/2"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+</LinearLayout>
