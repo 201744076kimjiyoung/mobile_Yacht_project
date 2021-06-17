@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -18,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
-    Button Login_btn;
+    Button Login_btn,find_btn;
     EditText Email, Password;
     private FirebaseAuth mAuth;
 
@@ -31,10 +30,12 @@ public class LoginActivity extends AppCompatActivity {
         //버튼 등록하기
 
         Login_btn = findViewById(R.id.btn_login);
-        Email = findViewById(R.id.edit_Email);
+        find_btn = findViewById(R.id.btn_pwd_find);
+        Email = findViewById(R.id.edit_Email2);
         Password = findViewById(R.id.edit_Password);
 
         findViewById(R.id.btn_login).setOnClickListener(onClickListener);
+        findViewById(R.id.btn_pwd_find).setOnClickListener(onClickListener);
     }
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
@@ -42,6 +43,9 @@ public class LoginActivity extends AppCompatActivity {
             switch (v.getId()){
                 case R.id.btn_login:
                     login();
+                    break;
+                case R.id.btn_pwd_find:
+                    find_pwd();
                     break;
 
             }
@@ -58,6 +62,8 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(LoginActivity.this,"로그인 성공",Toast.LENGTH_SHORT).show();
+                            onMap();
+
                             //밑은 프로젝트 진행해서 MAP관련 페이지 만들때 사용
                             //Intent intent = new Intent(this, Activity.class);
                             //startActivity(intent);
@@ -68,5 +74,14 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
 
+    }
+    private void find_pwd() {
+        Intent intent = new Intent(this, pwd_findActivity.class);
+        startActivity(intent);
+
+    }
+    public void onMap(){
+        Intent intent = new Intent(this, MapActivity.class);
+        startActivity(intent);
     }
 }
