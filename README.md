@@ -28,6 +28,12 @@ Yacht Dice를 구현하여 모바일로도 두명의 유저가 하나의 핸드�
 플레이 할 수 있습니다.<br>
 ![image](https://user-images.githubusercontent.com/71188378/126088749-d7fd1289-b892-47b5-923c-bb9e919f71d0.png)
 ![image](https://user-images.githubusercontent.com/71188378/126088754-93add30e-860f-4401-9e47-308e7dacb80c.png)<br>
-Yacht Dice의 중요한 기능 중 하나인 
+Yacht Dice의 중요한 기능들은 전부 구현되었습니다.<br>
+주사위 점수가 점수판마다 다르게 들어가는 기능, <br>
+주사위를 고정시키는 기능, 주사위 굴린횟수 카운트<br>
+턴 기능, 보너스 점수를 계산하는 기능 등 <br>
+정상적으로 Yacht dice를 플레이 할 수 있는 상태 입니다.<br>
+
+
 
 
