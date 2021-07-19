@@ -34,7 +34,7 @@ Yacht Dice의 중요한 기능들은 전부 구현되었습니다.<br>
 턴 기능, 보너스 점수를 계산하는 기능 등 <br>
 정상적으로 Yacht dice를 플레이 할 수 있는 상태 입니다.<br>
 
-#### 목표
+#### 목표3
 fire base를 이용해 회원가입 기능을 넣었습니다.<br>
 
 ![image](https://user-images.githubusercontent.com/71188378/126088986-5db4f8f4-d18b-4a07-958f-861d3a24ab3c.png)
